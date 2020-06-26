@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Head, Page, Header, Section } from "../src/components";
 
 /**
  * The <code>`App`</code> is used to render the landing page.
@@ -10,6 +10,7 @@ import Head from "next/head";
  *
  * The `<meta></meta>` tag defines metadata.
  * - `viewport` Is used to define the viewport
+ * - `author` Is used to define the author
  * - `description` Is used to describe the site
  * - `keywords` Is used to describe keywords for search engines (SEO)
  *              what keywords are allowed? Rights?
@@ -18,15 +19,11 @@ import Head from "next/head";
 const App = () => {
   return (
     <>
-      <Head>
-        <title>frse</title>
-        <meta name="UTF-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="author" content="Sebastian Fries (FRSE)" />
-        <meta name="description" content="frse Portofolio" />
-        <meta name="keywords" content="frse, FRSE, portfolio, next.js" />
-      </Head>
-      <div>FRSE's Page</div>
+      <Head />
+      <Page>
+        <Header />
+        <Section />
+      </Page>
     </>
   );
 };

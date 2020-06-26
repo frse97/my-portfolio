@@ -1,9 +1,11 @@
 interface IFrseSectionProps {
-
+  children?: React.ReactNode;
 }
 
 const FrseSection: React.FC<IFrseSectionProps> = props => {
-  return <section></section>;
+  const { children } = props;
+
+  return <section>{children}</section>;
 };
 
 export default FrseSection;

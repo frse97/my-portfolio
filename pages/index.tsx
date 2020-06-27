@@ -1,4 +1,5 @@
 import { Head, Page, Header, Section } from "../src/components";
+import '../main.less';
 
 /**
  * The <code>`App`</code> is used to render the landing page.
@@ -22,7 +23,11 @@ const App = () => {
       <Head />
       <Page>
         <Header />
-        <Section />
+        <Section>
+          <div className="test">
+            <span className="frse">frse</span>
+          </div>
+        </Section>
       </Page>
     </>
   );

@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 interface IFrseHeadProps {}
 
-const FrseHead: React.FC<IFrseHeadProps> = props => {
+const FrseHead: React.FC<IFrseHeadProps> = (props) => {
   return (
     <Head>
       <title>frse</title>

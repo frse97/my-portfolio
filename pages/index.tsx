@@ -1,4 +1,4 @@
-import { Head, Page, Header, Section } from "../src/components";
+import { Head, Page, Header, Section } from '../src/components';
 import '../main.less';
 
 /**
@@ -17,7 +17,7 @@ import '../main.less';
  *              what keywords are allowed? Rights?
  */
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Head />

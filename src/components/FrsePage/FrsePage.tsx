@@ -6,7 +6,7 @@ const FrsePage: React.FC<IFrsePageProps> = props => {
   const { children } = props;
 
   return (
-    <div>
+    <div className="frse-page">
       {children}
     </div>
   );

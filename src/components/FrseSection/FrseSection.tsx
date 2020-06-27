@@ -5,7 +5,7 @@ interface IFrseSectionProps {
 const FrseSection: React.FC<IFrseSectionProps> = props => {
   const { children } = props;
 
-  return <section>{children}</section>;
+  return <section className="frse-section">{children}</section>;
 };
 
 export default FrseSection;

@@ -1,4 +1,5 @@
-import { Head, Page, Header, Section } from '../src/components';
+// import App from 'next/app';
+import { Head, Page, Header, Section, Footer } from '../src/components';
 import '../main.less';
 
 /**
@@ -17,9 +18,11 @@ import '../main.less';
  *              what keywords are allowed? Rights?
  */
 
-const App: React.FC = () => {
+// function FrsePortfolio({ Component, pageProps }) {
+const FrsePortfolio = () => {
+  // <div className="frse-portfolio" {...pageProps}>
   return (
-    <>
+    <div className="frse-portfolio">
       <Head />
       <Page>
         <Header />
@@ -28,9 +31,15 @@ const App: React.FC = () => {
             <span className="frse">frse</span>
           </div>
         </Section>
+        <Footer />
       </Page>
-    </>
+    </div>
   );
 };
 
-export default App;
+// FrsePortfolio.getInitialProps = async (appContext) => {
+//   const appProps = await App.getInitialProps(appContext);
+//   return { ...appProps };
+// };
+
+export default FrsePortfolio;

@@ -1,0 +1,18 @@
+@theme-changer-size: 128px;
+@theme-changer-position: -20px;
+@theme-changer-icon-size: 82px;
+
+.frse {
+  &-theme-changer {
+    position: absolute;
+    top: @theme-changer-position;
+    right: @theme-changer-position;
+    width: @theme-changer-size;
+    height: @theme-changer-size;
+    border-radius: @theme-changer-size;
+
+    > svg {
+        font-size: @theme-changer-icon-size;
+    }
+  }
+}

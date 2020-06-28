@@ -1,45 +1,36 @@
 // import App from 'next/app';
-import { Head, Page, Header, Section, Footer } from '../src/components';
+import FrsePortfolio from '../src/components/FrsePortfolio/FrsePortfolio';
+import cs from 'classnames';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioThemes } from './model';
 import '../main.less';
+
 
 /**
  * The <code>`App`</code> is used to render the landing page.
  *
- * The `<title></title>` tag defined document title
- * - Provides title for page
- * - Provides title when added to favourites
- * - Provides title for page in search engine results
- *
- * The `<meta></meta>` tag defines metadata.
- * - `viewport` Is used to define the viewport
- * - `author` Is used to define the author
- * - `description` Is used to describe the site
- * - `keywords` Is used to describe keywords for search engines (SEO)
- *              what keywords are allowed? Rights?
  */
+const FrseApp = () => {
+  const [theme, setTheme] = useState<PortfolioThemes>('light');
+  const changerClass = cs("frse-theme-changer", theme === 'light' ? 'frse-light' : 'frse-dark');
 
-// function FrsePortfolio({ Component, pageProps }) {
-const FrsePortfolio = () => {
-  // <div className="frse-portfolio" {...pageProps}>
+  const changeTheme = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+
+    const doc = document;
+    console.log(doc);
+  };
+
   return (
-    <div className="frse-portfolio">
-      <Head />
-      <Page>
-        <Header />
-        <Section>
-          <div className="test">
-            <span className="frse">frse</span>
-          </div>
-        </Section>
-        <Footer />
-      </Page>
-    </div>
+    <>
+      <FrsePortfolio theme={theme} />
+      <button className={changerClass} onClick={changeTheme}>
+        <FontAwesomeIcon icon={theme === 'light' ? faSun : faMoon} />
+      </button>
+    </>
   );
 };
 
-// FrsePortfolio.getInitialProps = async (appContext) => {
-//   const appProps = await App.getInitialProps(appContext);
-//   return { ...appProps };
-// };
-
-export default FrsePortfolio;
+export default FrseApp;

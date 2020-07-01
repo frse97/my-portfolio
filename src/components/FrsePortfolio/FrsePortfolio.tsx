@@ -1,5 +1,4 @@
-import { IFrsePortfolio, PortfolioThemes } from "../../../pages/model";
-import { useState } from "react";
+import { IFrsePortfolio } from "../../../pages/model";
 import { Page, Header, Main, Section, Footer } from "..";
 import cs from 'classnames';
 import './FrsePortfolio.less';

@@ -41,3 +41,4 @@ node_modules
 #helper files
 .gitcommands
 .vscodecommands
+public\todo.txt

@@ -1,6 +1,6 @@
 import { IFrsePortfolio, PortfolioThemes } from "../../../pages/model";
 import { useState } from "react";
-import { Page, Header, Section, Footer } from "..";
+import { Page, Header, Main, Section, Footer } from "..";
 import cs from 'classnames';
 import './FrsePortfolio.less';
 
@@ -12,21 +12,24 @@ import './FrsePortfolio.less';
 // function FrsePortfolio({ Component, pageProps }) {
 const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {
   const { theme } = props;
-  const [currentTheme, setTheme] = useState<PortfolioThemes>(theme);
 
-  const themeClass = currentTheme === 'light' ? 'frse-light' : 'frse-dark';
+  const themeClass = theme === 'light' ? 'frse-light' : 'frse-dark';
   const classNames = cs('frse-portfolio', themeClass);
 
+  console.log('theme', theme);
+  console.log(themeClass);
   return (
     // <div className="frse-portfolio" {...pageProps}>
     <div className={classNames}>
       <Page>
         <Header />
-        <Section>
-          <div className="test">
-            <span className="frse">frse</span>
-          </div>
-        </Section>
+        <Main>
+          <Section>
+            <div className="test">
+              <span className="frse">frse</span>
+            </div>
+          </Section>
+        </Main>
         <Footer />
       </Page>
     </div>

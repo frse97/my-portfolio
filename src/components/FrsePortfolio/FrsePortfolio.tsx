@@ -1,10 +1,12 @@
 import { IFrsePortfolio } from "../../../pages/model";
 import { Page, Header, Main, Section, Footer } from "..";
+import { FrseButton } from "../common";
+
 import cs from 'classnames';
 import './FrsePortfolio.less';
 
 /**
- * The <code>`App`</code> is used to render the landing page.
+ * The <code>`FrsePortfolio`</code> is used to render the Portfolio itself.
  *
 */
 
@@ -15,8 +17,6 @@ const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {
   const themeClass = theme === 'light' ? 'frse-light' : 'frse-dark';
   const classNames = cs('frse-portfolio', themeClass);
 
-  console.log('theme', theme);
-  console.log(themeClass);
   return (
     // <div className="frse-portfolio" {...pageProps}>
     <div className={classNames}>
@@ -24,9 +24,10 @@ const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {
         <Header />
         <Main>
           <Section>
-            <div className="test">
+            {/* <div className="test">
               <span className="frse">frse</span>
-            </div>
+              <FrseButton>Test</FrseButton>
+            </div> */}
           </Section>
         </Main>
         <Footer />

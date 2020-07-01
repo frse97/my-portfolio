@@ -1,24 +1,33 @@
+@import '../common/theme.less';
+
 @theme-changer-size: 128px;
 @theme-changer-position: 0px;
 @theme-changer-icon-size: 82px;
-//
-// TODO: extract Button overwriting styles in FrseButton Component
-//
+
 .frse {
   &-theme-changer {
     position: absolute;
     top: @theme-changer-position;
-    right: @theme-changer-position;
-    width: @theme-changer-size;
-    height: @theme-changer-size;
     border-color: transparent;
     outline-style: none;
+    transition: transform 2s ease-in-out;
     > svg {
       font-size: @theme-changer-icon-size;
+      background-color: transparent;
+    }
+    // Theming
+    &.frse-light{
+      color: @theme-light-icon-color;
+    }
+    &.frse-dark{
+      color: @theme-dark-icon-color;
     }
   }
   &-theme-changer:hover {
+    cursor: pointer;
     border-color: transparent;
+    transform: rotate(360deg);
+    transition: transform 2s ease-in-out;
   }
   &-theme-changer:focus {
     border-color: transparent;

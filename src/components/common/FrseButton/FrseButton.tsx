@@ -17,7 +17,11 @@ const FrseButton: React.FC<IFrseButton> = (props) => {
 
   const classNames = cs('frse-btn', className);
 
-  return <button className={classNames} onClick={onClick} >{children}</button>;
+  return (
+    <button className={classNames} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default FrseButton;

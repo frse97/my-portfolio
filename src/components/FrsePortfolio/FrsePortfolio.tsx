@@ -1,14 +1,14 @@
-import { IFrsePortfolio } from "../../../pages/model";
-import { Page, Header, Main, Section, Footer } from "..";
-import { FrseButton } from "../common";
-
 import cs from 'classnames';
+import { IFrsePortfolio } from '../../../pages/model';
+import { Page, Header, Main, Section, Footer } from '..';
+import { FrseButton } from '../common';
+
 import './FrsePortfolio.less';
 
 /**
  * The <code>`FrsePortfolio`</code> is used to render the Portfolio itself.
  *
-*/
+ */
 
 // function FrsePortfolio({ Component, pageProps }) {
 const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {

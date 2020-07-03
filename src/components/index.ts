@@ -8,4 +8,4 @@ export * from './FrsePortfolio';
 export * from './FrseThemeChanger';
 
 // Common
-export * from './common/';
+export * from './common';

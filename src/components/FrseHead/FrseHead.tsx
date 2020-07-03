@@ -29,6 +29,8 @@ const FrseHead: React.FC<IFrseHeadProps> = (props) => {
   );
 };
 
-{/* <meta name="description" content={this.props.t('decription')} /> */}
+{
+  /* <meta name="description" content={this.props.t('decription')} /> */
+}
 // export default withTranslation()(FrseHead);
 export default FrseHead;

@@ -1,5 +1,5 @@
 import cs from 'classnames';
-import { IFrsePortfolio } from '../../../pages/model';
+import { IFrsePortfolio } from '../../../models/model';
 import { Page, Header, Main, Section, Footer } from '..';
 import { FrseButton } from '../common';
 

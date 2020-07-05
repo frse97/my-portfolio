@@ -9,8 +9,8 @@ const app = next({ dev: process.env.NODE_ENV !== 'production' });
 const handle = app.getRequestHandler();
 
 (async () => {
-  await app.prepare()
-  const server = express()
+  await app.prepare();
+  const server = express();
 
 //   await nextI18next.initPromise
 //   server.use(nextI18NextMiddleware(nextI18next))

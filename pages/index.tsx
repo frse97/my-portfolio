@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { FrsePortfolio, FrseThemeChanger } from '../src/components';
 import '../main.less';
-import { PortfolioThemes } from './model';
+import { PortfolioThemes } from '../models/model';
 
 /**
  * The <code>`App`</code> is used to render the landing page.

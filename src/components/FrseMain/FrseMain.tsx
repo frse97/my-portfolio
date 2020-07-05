@@ -1,3 +1,4 @@
+import React from 'react';
 interface IFrseMainProps {
   children?: React.ReactNode;
 }

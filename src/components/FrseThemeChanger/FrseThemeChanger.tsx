@@ -1,25 +1,25 @@
 import React from 'react';
 import cs from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioThemes } from '../../../models/model';
-import { FrseButton } from '../common';
+import { FrseSwitcher } from '../common';
 import './FrseThemeChanger.less';
+import Sun from '../icons/Sun';
+import Moon from '../icons/Moon';
 
 interface IFrseThemeChanger {
   theme: PortfolioThemes;
   className?: string;
-  onClick: () => void;
+  onChange: () => void;
 }
 
 const FrseThemeChanger: React.FC<IFrseThemeChanger> = (props) => {
-  const { className, theme, onClick } = props;
+  const { className, theme, onChange } = props;
   const changerClass = cs('frse-theme-changer', theme === 'light' ? 'frse-light' : 'frse-dark', className);
 
   return (
-    <FrseButton className={changerClass} onClick={onClick}>
-      <FontAwesomeIcon icon={theme === 'light' ? faSun : faMoon} />
-    </FrseButton>
+    <FrseSwitcher className={changerClass} onChange={onChange} theme={theme}>
+      {theme === 'light' ? <Sun /> : <Moon />}
+    </FrseSwitcher>
   );
 };
 

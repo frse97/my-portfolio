@@ -9,3 +9,6 @@ export * from './FrseThemeChanger';
 
 // Common
 export * from './common';
+
+// Icons 
+export * from './icons';

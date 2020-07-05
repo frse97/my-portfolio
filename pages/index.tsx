@@ -14,7 +14,7 @@ const FrseApp = () => {
   return (
     <>
       <FrsePortfolio theme={theme} />
-      <FrseThemeChanger theme={theme} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+      <FrseThemeChanger theme={theme} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
     </>
   );
 };

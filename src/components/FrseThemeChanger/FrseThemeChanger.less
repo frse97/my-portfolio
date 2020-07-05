@@ -1,35 +1,51 @@
 @import '../common/theme.less';
 
 @theme-changer-size: 128px;
-@theme-changer-position: 0px;
+@theme-changer-position: 10px;
 @theme-changer-icon-size: 82px;
 
 .frse {
-  &-theme-changer {
+  &-theme-changer.frse-switch {
     position: absolute;
     top: @theme-changer-position;
-    border-color: transparent;
-    outline-style: none;
-    transition: transform 2s ease-in-out;
-    > svg {
-      font-size: @theme-changer-icon-size;
-      background-color: transparent;
-    }
-    // Theming
-    &.frse-light{
-      color: @theme-light-icon-color;
-    }
-    &.frse-dark{
-      color: @theme-dark-icon-color;
+    left: @theme-changer-position;
+  }
+
+  &-theme-changer{
+    .frse-icon{
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      margin: auto 0;
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+      box-shadow: 0px 0px 16px #2020203d;
+      border-radius: 34px;
+
+      >svg{
+        height: inherit;
+        align-items: center;
+      }
     }
   }
-  &-theme-changer:hover {
-    cursor: pointer;
-    border-color: transparent;
-    transform: rotate(360deg);
-    transition: transform 2s ease-in-out;
+  //Handling Themes
+  &-theme-changer.frse-light{
+    .frse-icon{
+      background: white;
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+    }
   }
-  &-theme-changer:focus {
-    border-color: transparent;
+
+  &-theme-changer.frse-dark{
+    .frse-icon{
+      background: white;
+      transform: translateX(24px);
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+    }
   }
 }

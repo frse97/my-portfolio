@@ -3,8 +3,8 @@ import cs from 'classnames';
 import { PortfolioThemes } from '../../../models/model';
 import { FrseSwitcher } from '../common';
 import './FrseThemeChanger.less';
-import Sun from '../icons/Sun';
-import Moon from '../icons/Moon';
+import Sun from '../FrseIcons/Sun';
+import Moon from '../FrseIcons/Moon';
 
 interface IFrseThemeChanger {
   theme: PortfolioThemes;

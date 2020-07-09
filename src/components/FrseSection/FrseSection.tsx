@@ -1,4 +1,5 @@
 import React from 'react';
+import './FrseSection.less';
 interface IFrseSectionProps {
   children?: React.ReactNode;
 }

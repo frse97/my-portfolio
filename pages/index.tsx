@@ -1,7 +1,7 @@
 // import App from 'next/app';
 import { useState, Profiler } from 'react';
 import { FrsePortfolio, FrseThemeChanger } from '../src/components';
-import '../main.less';
+import '../styles/main.less';
 import { PortfolioThemes } from '../models/model';
 
 /**

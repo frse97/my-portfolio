@@ -2,6 +2,7 @@ export * from './FrseHead';
 export * from './FrseHeader';
 export * from './FrseFooter';
 export * from './FrseMain';
+export * from './FrseNav';
 export * from './FrsePage';
 export * from './FrseSection';
 export * from './FrsePortfolio';
@@ -11,4 +12,4 @@ export * from './FrseThemeChanger';
 export * from './common';
 
 // Icons 
-export * from './icons';
+export * from './FrseIcons';

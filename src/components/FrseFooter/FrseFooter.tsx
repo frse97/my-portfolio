@@ -1,4 +1,5 @@
 import React from 'react';
+import './FrseFooter.less';
 
 interface IFrseFooterProps {
   children?: React.ReactNode;

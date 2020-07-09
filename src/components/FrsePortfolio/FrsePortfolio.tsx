@@ -2,10 +2,7 @@ import React from 'react';
 import cs from 'classnames';
 import { IFrsePortfolio } from '../../../models/model';
 import { Page, Header, Main, Section, Footer } from '..';
-import { FrseButton } from '../common';
-
 import './FrsePortfolio.less';
-import { Sun, Moon } from '../icons';
 
 /**
  * The <code>`FrsePortfolio`</code> is used to render the Portfolio itself.

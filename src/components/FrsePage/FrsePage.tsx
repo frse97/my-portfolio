@@ -1,4 +1,5 @@
 import React from 'react';
+import './FrsePage.less';
 interface IFrsePageProps {
   children?: React.ReactNode;
 }

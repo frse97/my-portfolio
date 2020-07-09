@@ -1,5 +1,5 @@
 // import App from 'next/app';
-import { useState } from 'react';
+import { useState, Profiler } from 'react';
 import { FrsePortfolio, FrseThemeChanger } from '../src/components';
 import '../main.less';
 import { PortfolioThemes } from '../models/model';
@@ -11,10 +11,16 @@ import { PortfolioThemes } from '../models/model';
 const FrseApp = () => {
   const [theme, setTheme] = useState<PortfolioThemes>('light');
 
+  const onRenderCallback = (id?: string, phase?: "mount" | "update", actualDuration?: number, baseDuration?: number, startTime?: number, commitTime?: number, interactions?: any ) => {
+    console.log('RENDER', phase);
+  }
+
   return (
     <>
-      <FrsePortfolio theme={theme} />
-      <FrseThemeChanger theme={theme} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+      <Profiler id="App" onRender={onRenderCallback}>
+        <FrsePortfolio theme={theme} />
+        <FrseThemeChanger theme={theme} onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+      </Profiler>
     </>
   );
 };

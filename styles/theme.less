@@ -1,16 +1,31 @@
-@theme-light-bgcolor: #fff;
-@theme-light-icon-color: #000;
-@theme-light-icon-bgcolor: transparent;
-@theme-dark-bgcolor: #000;
-@theme-dark-icon-color: #fff;
-@theme-dark-icon-bgcolor: transparent;
+/**
+ Theme Definition
+ - Inpiration: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+ - :root -> "light"
+ - data-theme "dark"
+*/
+:root {
+  --primary-color: #0c0c0c;
+  --secondary-color: #0b0b0b;
+  --font-color: #0c0c0c;
+  --bg-color: #fff;
+  --heading-color: #0c0c0c;
+  --light: #fff;
+  --dark: #000;
+}
 
-//Defines the Themes
-.frse {
-  &-light {
-    background-color: @theme-light-bgcolor;
-  }
-  &-dark {
-    background-color: @theme-dark-bgcolor;
-  }
+[data-theme="dark"] {
+  --primary-color: #e7e7e7;
+  --secondary-color: #e8e8e8;
+  --font-color: #e7e7e7;
+  --bg-color: #000;
+  --heading-color: #e7e7e7;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+h1{
+  color: var(--secondary-color);
 }

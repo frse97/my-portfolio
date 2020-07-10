@@ -1,51 +1,55 @@
 @import '../../../styles/theme.less';
+@import '../../../styles/common.less';
 
 @theme-changer-size: 128px;
-@theme-changer-position: 10px;
 @theme-changer-icon-size: 82px;
 
 .frse {
   &-theme-changer.frse-switch {
     position: absolute;
-    top: @theme-changer-position;
-    left: @theme-changer-position;
-  }
+    bottom: 2rem;
+    left: 2rem;
 
-  &-theme-changer{
-    .frse-icon{
+    .frse-icon {
+      //Sizes
+      width: @usability_width_md;
+      height: @usability_height_md;
+      //Position
       position: absolute;
-      height: 40px;
-      width: 40px;
       left: 0px;
       top: 0px;
       bottom: 0px;
       margin: auto 0;
+      //Theming
+      background-color: var(--light);
+      box-shadow: 0px 0px 16px #2020203d;
+      //Styling
+      border-radius: 34px;
+      //Animations
       transition: 2s;
       -webkit-transition: 2s;
-      box-shadow: 0px 0px 16px #2020203d;
-      border-radius: 34px;
 
-      >svg{
+      > svg {
         height: inherit;
         align-items: center;
       }
     }
   }
-  //Handling Themes
-  &-theme-changer.frse-light{
-    .frse-icon{
-      background: white;
-      transition: 2s transform;
-      -webkit-transition: 2s transform;
-    }
-  }
+}
 
-  &-theme-changer.frse-dark{
-    .frse-icon{
-      background: white;
-      transform: translateX(24px);
-      transition: 2s transform;
-      -webkit-transition: 2s transform;
-    }
+//Light Theme
+:root[data-theme='light'] {
+  .frse-theme-changer .frse-icon {
+    transition: 2s transform;
+    -webkit-transition: 2s transform;
+  }
+}
+
+//Dark Theme
+:root[data-theme='dark'] {
+  .frse-theme-changer .frse-icon {
+    transform: translateX(24px);
+    transition: 2s transform;
+    -webkit-transition: 2s transform;
   }
 }

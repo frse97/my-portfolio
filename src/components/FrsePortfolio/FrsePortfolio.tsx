@@ -11,21 +11,18 @@ import './FrsePortfolio.less';
 
 // function FrsePortfolio({ Component, pageProps }) {
 const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {
-  const { theme } = props;
 
-  const themeClass = theme === 'light' ? 'frse-light' : 'frse-dark';
-  const classNames = cs('frse-portfolio', themeClass);
+  const classNames = cs('frse-portfolio');
 
   return (
     // <div className="frse-portfolio" {...pageProps}>
     <div className={classNames}>
       <Page>
-        <Header />
         <Main>
           <Section>
+            <h1>Frse Portfolio</h1>
           </Section>
         </Main>
-        <Footer />
       </Page>
     </div>
   );

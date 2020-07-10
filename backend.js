@@ -9,11 +9,19 @@ const app = next({ dev: process.env.NODE_ENV !== 'production' });
 const handle = app.getRequestHandler();
 
 (async () => {
-  await app.prepare();
+  try {
+    await app.prepare();
+  } catch (e) {
+    console.log('Error while preparing the Next app');
+  }
   const server = express();
 
-  server.get('*', (req, res) => handle(req, res))
+  server.get('*', (req, res) => handle(req, res));
 
-  await server.listen(port)
-  console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line no-console
+  try {
+    await server.listen(port);
+    console.log(`> Ready on http://localhost:${port}`); // eslint-disable-line no-console
+  } catch(e) {
+    console.log(`> Unable to host on http://localhost:${port}`);
+  }
 })();

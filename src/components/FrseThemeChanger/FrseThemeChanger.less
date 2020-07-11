@@ -1,8 +1,8 @@
 @import '../../../styles/theme.less';
 @import '../../../styles/common.less';
 
-@theme-changer-size: 128px;
-@theme-changer-icon-size: 82px;
+@theme-changer-size: 8rem;
+@theme-changer-icon-size: 5.125rem;
 
 .frse {
   &-theme-changer.frse-switch {
@@ -12,26 +12,24 @@
 
     .frse-icon {
       //Sizes
-      width: @usability_width_md;
-      height: @usability_height_md;
+      width: @usability-width-md;
+      height: @usability-height-md;
       //Position
       position: absolute;
-      left: 0px;
-      top: 0px;
-      bottom: 0px;
+      left: 0;
+      top: 0;
+      bottom: 0;
       margin: auto 0;
       //Theming
       background-color: var(--light);
-      box-shadow: 0px 0px 16px #2020203d;
+      box-shadow: 0 0 1rem #2020203d;
       //Styling
-      border-radius: 34px;
-      //Animations
-      transition: 2s;
-      -webkit-transition: 2s;
+      border-radius: 2.125rem;
 
       > svg {
         height: inherit;
         align-items: center;
+        font-size: 1.4rem;
       }
     }
   }
@@ -40,16 +38,28 @@
 //Light Theme
 :root[data-theme='light'] {
   .frse-theme-changer .frse-icon {
-    transition: 2s transform;
-    -webkit-transition: 2s transform;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    background-color: var(--dark);
+    path {
+      fill: var(--light);
+      transition: 2s fill;
+      -webkit-transition: 2s fill;
+    }
   }
 }
 
 //Dark Theme
 :root[data-theme='dark'] {
   .frse-theme-changer .frse-icon {
-    transform: translateX(24px);
-    transition: 2s transform;
-    -webkit-transition: 2s transform;
+    transform: translateX(1.5rem);
+    transition: background-color 2s ;
+    -webkit-transition: background-color 2s;
+    background-color: var(--light);
+    path {
+      fill: var(--dark);
+      transition: 2s fill;
+      -webkit-transition: 2s fill;
+    }
   }
 }

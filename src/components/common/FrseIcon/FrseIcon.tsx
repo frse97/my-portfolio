@@ -1,4 +1,5 @@
 import React from 'react';
+import './FrseIcon.less';
 
 interface IFrseIcon {
   component: JSX.Element;

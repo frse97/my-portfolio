@@ -1,6 +1,6 @@
 @import '../../../../styles/common.less';
-@switch-width: @usability_width_md + 20px;
-@switch-height: @usability_height_md - 6px;
+@switch-width: @usability-width-md + 1.25rem;
+@switch-height: @usability-height-md - 0.375rem;
 
 // Box around the switcher
 .frse {
@@ -22,13 +22,13 @@
     }
 
     & input:focus + .frse-switch-slider {
-      box-shadow: 0 0 1px #2196fe;
+      box-shadow: 0 0 0.063rem #2196fe;
     }
 
     & input:checked + .frse-switch-slider:before {
-      -webkit-transform: translateX(24px);
-      -ms-transform: translateX(24px);
-      transform: translateX(24px);
+      -webkit-transform: translateX(1.5rem);
+      -ms-transform: translateX(1.5rem);
+      transform: translateX(1.5rem);
       background: transparent;
     }
 
@@ -47,22 +47,22 @@
     &-slider:before {
       position: absolute;
       content: '';
-      height: @usability_height_md;
-      width: @usability_width_md;
-      left: 0px;
-      bottom: 4px;
+      height: @usability-height-md;
+      width: @usability-width-md;
+      left: 0;
+      bottom: 0.25rem;
       top: 0;
       bottom: 0;
       margin: auto 0;
       transition: 2s;
       -webkit-transition: 2s;
-      box-shadow: 0px 0px 16px #2020203d;
+      box-shadow: 0 0 1rem #2020203d;
       background: transparent;
     }
 
     //Styling the rounded Slider
     &-slider-round {
-      border-radius: 34px;
+      border-radius: 2.125rem;
     }
     &-slider-round:before {
       border-radius: 50%;

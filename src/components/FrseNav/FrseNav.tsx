@@ -1,14 +1,23 @@
 import React from 'react';
 import './FrseNav.less';
+import FrseNavItem, { IFrseNavItemProps } from './FrseNavItem';
 
 interface IFrseNavProps {
-  children?: React.ReactNode;
+  items?: IFrseNavItemProps[];
 }
 
 const FrseNav: React.FC<IFrseNavProps> = (props) => {
-  const { children } = props;
-
-  return <nav className="frse-nav">{children}</nav>;
+  const { items } = props;
+  
+  return (
+    <nav className="frse-nav">
+      <div className="frse-nav-items">
+        {items.map((item: IFrseNavItemProps) => (
+          <FrseNavItem key={items.indexOf(item)} id={item.id} href={item.href} type={item.type} icon={item.icon} label={item.label} />
+        ))}
+      </div>
+    </nav>
+  );
 };
 
 export default FrseNav;

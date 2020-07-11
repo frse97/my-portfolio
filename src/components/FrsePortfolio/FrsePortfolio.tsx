@@ -20,7 +20,6 @@ const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {
       <Page>
         <Main>
           <Section>
-            <h1>Frse Portfolio</h1>
           </Section>
         </Main>
       </Page>

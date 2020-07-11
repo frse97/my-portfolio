@@ -1,9 +1,11 @@
 // import App from 'next/app';
 import { useState, Profiler } from 'react';
-
-import '../styles/main.less';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { PortfolioThemes } from '../models/model';
 import { Nav, Header, Footer, FrsePortfolio, FrseThemeChanger } from '../src';
+import '../styles/main.less';
+import { IFrseNavItemProps } from '../src/components/FrseNav/FrseNavItem';
 
 /**
  * The <code>`App`</code> is used to render the landing page.
@@ -21,7 +23,9 @@ const FrseApp = () => {
     commitTime?: number,
     interactions?: any
   ) => {
-    console.log('RENDER', phase);
+    if(phase === 'mount'){
+      document.documentElement.setAttribute('data-theme', 'light'); 
+    }
   };
 
   const handleOnChange = () => {
@@ -33,11 +37,26 @@ const FrseApp = () => {
     }
   };
 
+  const navItems: IFrseNavItemProps[] = [
+    {
+      id: 'frse-github',
+      type: 'external',
+      href: "https://github.com/frse97/",
+      icon: <FontAwesomeIcon icon={faGithub} />
+    },
+    {
+      id: 'frse-linkedin',
+      type: 'external',
+      href: "https://www.linkedin.com/in/sebastian-fries-7321a01a3/",
+      icon: <FontAwesomeIcon icon={faLinkedin} />
+    }
+  ]
+
   return (
     <>
       <Profiler id="App" onRender={onRenderCallback}>
         <Header>
-          <Nav />
+          <Nav items={navItems} />
         </Header>
         <FrsePortfolio />
         <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import cs from 'classnames';
 import { IFrsePortfolio } from '../../../models/model';
-import { Page, Header, Main, Section, Footer } from '..';
+import { Page, Main, Section, Footer } from '..';
 import './FrsePortfolio.less';
 
 /**

@@ -27,6 +27,21 @@ const FrseHead: React.FC<IFrseHeadProps> = (props) => {
       <meta name="author" content="Sebastian Fries (FRSE)" />
       <meta name="description" content="frse Portfolio" />
       <meta name="keywords" content="frse, FRSE, portfolio, next.js" />
+      {/* Meta Tags for Social Media Card-ability on Twitter, Fb, LinkedIn ... */}
+      <meta property="og:title" content="Frse Portfolio" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="" />
+      {/* 
+        Recommended Sizes:
+        - Fb -> 1200 * 628 (max 8Mb)
+        - Twitter -> 1200 * 628 (max 5Mb)
+          - twitter:title
+          - twitter:card
+        - LinkeIn -> 1200 * 627 (max ?)
+        https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards
+        
+      */}
+      <meta property="og:image" content="" />
     </Head>
   );
 };

@@ -19,12 +19,15 @@ const FrsePortfolio: React.FC<IFrsePortfolio> = (props) => {
       <Page>
         <Main>
           <Section>
-            <h1 style={{textAlign: 'center'}}>
-              <span>Hi! I'm Sebastian.</span>
-              <span> Junior frontend Developer,</span>
-              <span> drunk Phylosophist</span>
-              <span> and artist.</span>
-            </h1>
+            <div className="frse-portfolio-presentation">
+              <h1>
+                <span>Hi! I'm Sebastian.</span>
+                <span> Junior frontend Developer,</span>
+                <span> drunk Phylosophist,</span>
+                <span> proud Nerd</span>
+                <span> and artist.</span>
+              </h1>
+            </div>
           </Section>
         </Main>
       </Page>

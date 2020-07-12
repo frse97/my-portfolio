@@ -4,7 +4,7 @@ Hi! This should in future be my portofolio made in Next.JS. It's currently in de
 
 ### Installation
 
-My  requires [Node.js](https://nodejs.org/en/) v10.13+ to run.
+The Project requires [Node.js](https://nodejs.org/en/) v10.13+ to run.
 
 Install the dependencies.
 

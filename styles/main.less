@@ -1,16 +1,19 @@
+//TODO: Export locally cause if no connection, build error because font is not found
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-
-//Overwrite Next
-div.__next-prerender-indicator {
-  display: none;
-}
 
 //Main Styling
 html {
+  min-height: 100vh;
 }
 body {
-  margin: 0;
+  min-height: inherit;
+  margin: 2.5rem 0 0 0;
 }
+
 h1 {
   font-family: 'Gloria Hallelujah', cursive;
+}
+
+#__next{
+  min-height: inherit;
 }

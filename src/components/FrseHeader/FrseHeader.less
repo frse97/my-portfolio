@@ -1,13 +1,26 @@
 @import '../../../styles/common.less';
 @import '../../../styles/theme.less';
 
-.frse{
-    &-header{
-        height: @usability-width-md;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        background-color: var(--bg-color);
-        border-bottom: 1px solid var(--primary-color);
+.frse {
+  &-header {
+    height: @usability-width-md;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--primary-color);
+
+    &-block{
+      height: 2.5rem;
+      width: 100%;
     }
+
+    &.header-collapsed {
+      transition: height 0.2s linear, display 2s;
+    }
+    &.header-expanded {
+      height: 5rem;
+      transition: height 0.2s linear, display 2s; 
+    }
+  }
 }

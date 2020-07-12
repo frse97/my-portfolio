@@ -1,13 +1,15 @@
 import React from 'react';
+import cs from 'classnames';
 import './FrseHeader.less';
 interface IFrseHeaderProps {
-  children?: React.ReactNode;
+  className?: string;
 }
 
 const FrseHeader: React.FC<IFrseHeaderProps> = (props) => {
-  const { children } = props;
+  const { className, children } = props;
+  const classNames = cs('frse-header', className);
 
-  return <header className="frse-header">{children}</header>;
+  return <header className={classNames}>{children}</header>;
 };
 
 export default FrseHeader;

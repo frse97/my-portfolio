@@ -28,6 +28,7 @@ const FrseHead: React.FC<IFrseHeadProps> = (props) => {
       <meta name="description" content="frse Portfolio" />
       <meta name="keywords" content="frse, FRSE, portfolio, next.js" />
       {/* Meta Tags for Social Media Card-ability on Twitter, Fb, LinkedIn ... */}
+      {/* https://ogp.me/ */}
       <meta property="og:title" content="Frse Portfolio" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="" />

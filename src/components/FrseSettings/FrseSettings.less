@@ -1,0 +1,52 @@
+@import '../../../styles/theme.less';
+
+.frse {
+  &-settings {
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 1.4rem;
+    padding: 0;
+    border: 0.25rem solid var(--primary-color);
+    box-sizing: content-box;
+    border-radius: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 0;
+
+    > svg {
+      height: inherit;
+    }
+
+    &.sett-collapsed {
+      &:hover {
+        cursor: pointer;
+        animation: spin 3s linear infinite;
+      }
+    }
+    &.sett-expanded {
+      transform: translateY(1.25rem);
+      transition: transform 0.4s linear;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

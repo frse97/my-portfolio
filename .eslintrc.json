@@ -1,0 +1,59 @@
+{
+    "extends": [
+      "airbnb-typescript",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "prettier"
+    ],
+    "plugins": ["react-hooks", "@typescript-eslint", "react", "jsx-a11y", "prettier"],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        },
+        "typescript": {}
+      }
+    },
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "import/no-cycle": "off",
+      "indent": "off",
+      "default-case": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "prefer-destructuring": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "prettier/prettier": "error",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+      "react/jsx-wrap-multilines": "off",
+      "react/no-array-index-key": "off",
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-empty-interface": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/interface-name-prefix": "off",
+      "@typescript-eslint/indent": "off",
+      "import/prefer-default-export": "off",
+      "import/no-extraneous-dependencies": "off",
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": ["draft"]
+        }
+      ],
+      "no-plusplus": "error"
+    }
+  }
+  

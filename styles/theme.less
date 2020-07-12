@@ -1,0 +1,38 @@
+/**
+ Theme Definition
+ - Inpiration: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+ - :root -> "light"
+ - data-theme "dark"
+*/
+@transition-slow: 4s;
+@transition-middle: 2.5s;
+@transition-fast: 1s;
+
+:root {
+  --primary-color: #0c0c0c;
+  --secondary-color: #0b0b0b;
+  --font-color: #0c0c0c;
+  --bg-color: #fff;
+  --box-shadow-color: rgba(0,0,0,0.5);
+  --heading-color: #0c0c0c;
+  --light: #fff;
+  --dark: #000;
+}
+
+[data-theme="dark"] {
+  --primary-color: #e7e7e7;
+  --secondary-color: #e8e8e8;
+  --font-color: #e7e7e7;
+  --bg-color: #000;
+  --heading-color: #e7e7e7;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  transition: background-color @transition-fast; 
+}
+h1{
+  color: var(--secondary-color);
+  transition: color @transition-fast;
+}

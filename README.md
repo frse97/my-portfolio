@@ -26,3 +26,13 @@ Start the Storybook
 ```sh
 $ yarn storybook
 ```
+
+### Next Steps 
+#### Short Term
+* Internationalisation (i18next)
+* Custom Theming 
+* Own FrseBot (Clippy)
+
+#### Long Term
+* Export own Component Library
+* Monorepo

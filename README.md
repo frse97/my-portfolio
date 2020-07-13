@@ -32,6 +32,7 @@ $ yarn storybook
 * Internationalisation (i18next)
 * Custom Theming 
 * Own FrseBot (Clippy)
+* Redux LocalStorage
 
 #### Long Term
 * Export own Component Library
